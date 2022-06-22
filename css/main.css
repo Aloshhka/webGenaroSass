@@ -1,0 +1,248 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Importamos la hoja de variables*/
+/* Importamos la hoja de mediaQueris*/
+@media (min-width: 326px) and (max-width: 550px) {
+  header #info #banner {
+    height: 80px; }
+    header #info #banner h1 {
+      font-size: xx-large; } }
+
+body {
+  background: url("../img/pattern.png");
+  font-family: 'Roboto Flex', sans-serif; }
+  body #sombra {
+    box-shadow: 0px 0px 35px gray; }
+
+main {
+  margin: 30px;
+  padding: 30px;
+  /* background-color: tomato;     */
+  /* ESTILOS CARRUSEL */ }
+  main #carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  main img {
+    margin: auto;
+    width: 80%; }
+
+header {
+  /* margin: 10px;*/
+  padding: 30px;
+  font-family: 'Bebas Neue';
+  /*background-color: aqua;*/
+  /* ESTILOS LOGO */
+  /* ESTILOS MENU */
+  /*BANER*/ }
+  header #logo {
+    float: left;
+    width: 400px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 300ms; }
+  header #logo img {
+    width: 300px; }
+  header #menu {
+    margin-left: 200px; }
+    header #menu .navbar-brand,
+    header #menu a {
+      color: grey;
+      font-size: large;
+      transition: 1.5s; }
+    header #menu .navbar-brand:hover {
+      color: #db9001;
+      transform: scale(1.2, 1.2);
+      transition: 1s; }
+    header #menu ul li a:hover {
+      color: #db9001;
+      transform: scale(1.2, 1.2); }
+  header #banner {
+    width: 95.5%;
+    height: 100px;
+    display: flex;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background: url("../img/banerNaranja.jpg");
+    background-position: -200px -200px;
+    margin: 20px auto;
+    overflow: hidden;
+    /*animacion*/
+    animation: backBanner 10s linear;
+    align-items: center; }
+    header #banner h1 {
+      display: block;
+      text-align: center;
+      /* width: 754px;  con esta medida va bien */
+      width: 850px;
+      font-family: "BebasNeue";
+      color: white;
+      font-size: 55px;
+      font-weight: normal;
+      font-family: 'Bebas Neue';
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 1px black;
+      margin: 27px auto;
+      animation: showText 10s linear; }
+
+@keyframes backBanner {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: -200px -200px; } }
+
+@keyframes showText {
+  0% {
+    transform: translateX(-600%) scale(5, 5);
+    opacity: 1; }
+  50% {
+    transform: translateX(600%) scale(5, 5);
+    opacity: 1; }
+  75% {
+    transform: translateX(-600%) scale(5, 5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0; }
+  100% {
+    transform: translateX(0%) scale(1, 1);
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    opacity: 1; } }
+
+/* ESTILOS NOSOTROS */
+.containerNos .textoNosotros h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Bebas Neue'; }
+
+.containerNos img {
+  width: 100%;
+  height: 350px; }
+
+.containerNos .row h2 {
+  color: #db9001;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Bebas Neue'; }
+
+.containerNos h4,
+.containerNos p,
+.containerNos .nos {
+  color: #db9001;
+  text-align: center; }
+
+/* ESTILOS FOOTER */
+footer {
+  height: auto;
+  padding: 10px;
+  margin-top: 100px;
+  text-align: center;
+  background-color: black; }
+  footer p {
+    color: #db9001; }
+
+/* Catalogo*/
+#mainCatalogo,
+#mainOfertas {
+  justify-content: center;
+  text-align: center; }
+  #mainCatalogo h2,
+  #mainCatalogo h4,
+  #mainOfertas h2,
+  #mainOfertas h4 {
+    color: #db9001;
+    font-weight: bold; }
+  #mainCatalogo p,
+  #mainOfertas p {
+    color: #db9001;
+    font-size: x-large; }
+  #mainCatalogo .galery img,
+  #mainOfertas .galery img {
+    transition: 1s; }
+  #mainCatalogo .galery img:hover,
+  #mainOfertas .galery img:hover {
+    transform: scale(1.5); }
+
+#mainOfertas {
+  justify-content: center;
+  text-align: center; }
+  #mainOfertas h2,
+  #mainOfertas h4 {
+    color: #db9001;
+    font-weight: bold; }
+  #mainOfertas p {
+    color: #db9001;
+    font-size: x-large; }
+
+/* Contacto */
+#mainContato .mapa {
+  flex: 30%; }
+  #mainContato .mapa iframe {
+    width: 95%;
+    height: 480px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 15px gray; }
+
+#mainContato h5 {
+  display: block;
+  background: url(../img/pxgray.png) white;
+  height: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Bebas Neue';
+  font-size: 40px;
+  line-height: 55px;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+
+#mainContato .formulario fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid #db9001;
+  padding: 5px; }
+  #mainContato .formulario fieldset legend {
+    font-family: 'Bebas Neue';
+    text-align: center; }
+  #mainContato .formulario fieldset input {
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    align-items: baseline;
+    margin: 3px;
+    font-weight: bold; }
+  #mainContato .formulario fieldset input:focus {
+    outline: none !important;
+    border: 2px solid #db9001;
+    box-shadow: 0 0 10px #719ECE; }
+  #mainContato .formulario fieldset textarea {
+    width: 350px;
+    height: auto;
+    padding: 10px;
+    font-weight: bold; }
+  #mainContato .formulario fieldset textarea:focus {
+    outline: none !important;
+    border: 2px solid #db9001;
+    box-shadow: 0 0 10px #719ECE; }
+
+/* Carrito*/
+#mainCarrito h2 {
+  font-weight: bolder;
+  text-align: center;
+  color: #db9001; }
